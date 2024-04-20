@@ -15,7 +15,7 @@ AWS Movie Poster Creator leverages AWS Lambda and Bedrock's Stability Diffusion 
 
 Below is the architectural diagram for the AWS Movie Poster Creator:
 
-![AWS Movie Poster Creator Architecture](assets/aws-movie-poster-creator-architecture.svg)
+![AWS Movie Poster Creator Architecture](assets/aws-movie-poster-creator-architecture%20(1).svg)
 
 ## 🎬 Movie Poster Design - Broad Implementation Steps
 
