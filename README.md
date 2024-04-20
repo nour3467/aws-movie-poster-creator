@@ -1,8 +1,17 @@
 # aws-movie-poster-creator
 AWS Movie Poster Creator leverages AWS Lambda and Bedrock's Stability Diffusion Model to generate dynamic movie posters. It stores images in S3, manages access via API Gateway, and provides secure URLs for viewing. Includes all necessary scripts and API definitions.
 
+## Table of Contents
 
-## 🏗️ Architecture Overview
+- [🌟 Project Overview](#aws-movie-poster-creator)
+- [🎬 Movie Poster Design - Broad Implementation Steps](#steps)
+- [🏛 Architecture Overview](#architecture-overview)
+- [🎥 Demo Video](#demo-video)
+- [🔒 License](#license)
+
+
+
+## 🏛 Architecture Overview
 
 Below is the architectural diagram for the AWS Movie Poster Creator:
 
@@ -41,4 +50,15 @@ This section outlines the implementation steps for the "Movie Poster Design" fea
 These steps provide a comprehensive roadmap for setting up the movie poster generation feature, leveraging powerful AWS services to automate and secure the process.
 
 
+
+## 🎥 Demo Video
+
+Watch the demo video below to see the AWS Movie Poster Creator in action:
+
+[![Watch the Demo Video](http://img.youtube.com/vi/VIDEO_ID/0.jpg)](http://www.youtube.com/watch?v=VIDEO_ID "AWS Movie Poster Creator Demo")
+
+
+## 🔒 License
+
+This project is licensed under the [GNU GPL Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 
