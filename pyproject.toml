@@ -8,6 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+boto3 = ">=1.28.63"
 
 
 [build-system]
