@@ -6,10 +6,9 @@ AWS Movie Poster Creator leverages AWS Lambda and Bedrock's Stability Diffusion 
 - [🌟 Project Overview](#aws-movie-poster-creator)
 - [🎬 Movie Poster Design - Broad Implementation Steps](#steps)
 - [🏛 Architecture Overview](#architecture-overview)
+- [🚀 Use Case Implementation Pre-Requisites](#use-case-implementation-pre-requisites)
 - [🎥 Demo Video](#demo-video)
 - [🔒 License](#license)
-
-
 
 ## 🏛 Architecture Overview
 
@@ -47,9 +46,53 @@ This section outlines the implementation steps for the "Movie Poster Design" fea
 
 - **Testing**: Use Postman to send requests to the `moviePosterDesignAPI` and ensure the entire flow from prompt submission to image retrieval via the pre-signed URL functions correctly.
 
-These steps provide a comprehensive roadmap for setting up the movie poster generation feature, leveraging powerful AWS services to automate and secure the process.
+## 🚀 Use Case Implementation Pre-Requisites
 
+Upgrade Boto3 version and configure AWS Lambda for advanced features.
 
+### Boto3 Version Upgrade Steps
+
+1. **Create AWS Lambda Function**
+   - **Function Name**: `bedrock-boto3Upgrade`
+   - **Code**: Include `import boto3` at the beginning of your script.
+
+2. **Verify Boto3 Version**
+   - Use the following command to check your current boto3 version:
+     ```python
+     print(boto3.__version__)
+     ```
+   - Ensure that the version is greater than `1.28.63`.
+
+3. **Upgrade Boto3 Using Lambda Layer**
+   - Reference for handling Python runtime errors in AWS Lambda: [AWS Knowledge Center](https://repost.aws/knowledge-center/lambda-python-runtime-errors)
+   - **Steps**:
+     - Add Layer Version ARN to your Lambda function.
+     - Verify that the updated version is greater than `1.28.63`.
+
+4. **Manual Creation of a Lambda Layer for Boto3**
+   - **Directory Setup**:
+     ```bash
+     LIB_DIR=boto3-udemy03/python
+     mkdir -p $LIB_DIR
+     ```
+   - **Install Boto3**:
+     ```bash
+     pip3 install boto3 -t $LIB_DIR
+     ```
+   - **Create Zip File**:
+     ```bash
+     cd boto3-udemy03
+     zip -r /tmp/boto3-udemy03.zip .
+     ```
+   - **Publish the Layer**:
+     ```bash
+     aws lambda publish-layer-version --layer-name boto3-udemy03 --zip-file fileb:///tmp/boto3-udemy03.zip
+     ```
+
+5. **Invoke Bedrock From AWS Lambda**
+   - **Documentation**: [Bedrock Boto3 API Reference](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/bedrock-runtime.html)
+
+**Note**: All instructions and code provided are copyrighted by Rahul Trisal. Do not reproduce or redistribute without permission.
 
 ## 🎥 Demo Video
 
@@ -57,8 +100,6 @@ Watch the demo video below to see the AWS Movie Poster Creator in action:
 
 [![Watch the Demo Video](http://img.youtube.com/vi/VIDEO_ID/0.jpg)](http://www.youtube.com/watch?v=VIDEO_ID "AWS Movie Poster Creator Demo")
 
-
 ## 🔒 License
 
 This project is licensed under the [GNU GPL Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
-
