@@ -22,7 +22,7 @@ This section outlines the implementation steps for the "Movie Poster Design" fea
 
 ### Step 1: Create an S3 Bucket
 
-- **Bucket Name**: `movieposterdesign01`
+- **Bucket Name**: `movieposterdesign3467` (you would need to choose an other unique name, as the Bucket Name in aws should be unique accross all accounts)
 - **Purpose**: This bucket will store the generated movie posters.
 
 ### Step 2: Create an AWS Lambda Function
@@ -34,7 +34,17 @@ This section outlines the implementation steps for the "Movie Poster Design" fea
   3. **Generate a Pre-Signed URL**: Create a pre-signed URL for the generated image to ensure secure, temporary access.
   4. **Send the URL**: Respond to requests via AWS API Gateway with the pre-signed URL of the generated image.
 
-### Step 3: Create a REST API using AWS API Gateway
+
+### Step 3: Grant the right permissions to S3 Bucket & Lambda function (IAM Role)
+
+1. **IAM Role**: Create an IAM Role with the following policies attached for necessary permissions:
+   - **AmazonBedrockFullAccess**: Grants full access to Bedrock services.
+   - **AmazonS3FullAccess**: Grants full access to Amazon S3.
+
+2. **Timeout Settings**: Configure the AWS Lambda function timeout settings to accommodate the time taken by Bedrock API to generate images.
+
+
+### Step 4: Create a REST API using AWS API Gateway
 
 - **API Name**: `moviePosterDesignAPI`
 - **Functionality**: Allow users to submit a prompt and return a pre-signed URL to view the generated image.
@@ -42,7 +52,7 @@ This section outlines the implementation steps for the "Movie Poster Design" fea
   1. **Receive Prompt**: Users pass the image generation prompt through the API.
   2. **Return Image URL**: Users receive a pre-signed URL to access the image securely.
 
-### Step 4: Test Using Postman API Tool
+### Step 5: Test Using Postman API Tool
 
 - **Testing**: Use Postman to send requests to the `moviePosterDesignAPI` and ensure the entire flow from prompt submission to image retrieval via the pre-signed URL functions correctly.
 
@@ -92,7 +102,9 @@ Upgrade Boto3 version and configure AWS Lambda for advanced features.
 5. **Invoke Bedrock From AWS Lambda**
    - **Documentation**: [Bedrock Boto3 API Reference](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/bedrock-runtime.html)
 
-**Note**: All instructions and code provided are copyrighted by Rahul Trisal. Do not reproduce or redistribute without permission.
+**Note**: If you're still struggling to install py dependecies into aws lambda, Please check out  this video :
+
+[![How to install a Python Dependency on AWS Lambda (2023)](http://img.youtube.com/vi/iluJFDUh-ck/0.jpg)](http://www.youtube.com/watch?v=iluJFDUh-ck "How to install a Python Dependency on AWS Lambda (2023)")
 
 ## 🎥 Demo Video
 
