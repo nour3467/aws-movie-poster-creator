@@ -1,0 +1,14 @@
+== URL
+https://znru32t970.execute-api.us-east-1.amazonaws.com/dev/moviePosterAPIDesign?
+
+
+== Prompt n°1 :
+
+Imagine a virtual world where a new fashion trend emerges, spreading rapidly across different social groups. Design an experiment using the stability diffusion model to predict how this trend will evolve over time. Consider factors such as initial adopters, influencers, and barriers to diffusion.
+
+
+== Prompt n°2 :
+In a fictional society, a controversial idea has been proposed that challenges traditional beliefs. Using the stability diffusion model, devise a simulation to explore how this idea spreads among different demographic groups. Analyze the impact of factors like media coverage, social networks, and resistance to change on the stability of the idea.
+
+== Prompt n°3 :
+Picture a scenario where a new technology promises to revolutionize an industry but faces skepticism from stakeholders. Develop a research framework using the stability diffusion model to assess the technology's adoption curve. Investigate variables such as perceived benefits, technological complexity, and organizational resistance to change to forecast its long-term stability.
