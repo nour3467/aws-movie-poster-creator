@@ -110,7 +110,7 @@ Upgrade Boto3 version and configure AWS Lambda for advanced features.
 
 Watch the demo video below to see the AWS Movie Poster Creator in action:
 
-[![Watch the video](assets/thumbnail.png)](https://github.com/nour3467/aws-movie-poster-creator/assets/your_video_file.mp4)
+https://github.com/nour3467/aws-movie-poster-creator/assets/71594772/5593a5b0-f11f-4376-ae9a-aa3118688cde
 
 ## 🔒 License
 
